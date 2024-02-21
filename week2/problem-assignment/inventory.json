@@ -1,0 +1,18 @@
+{
+  "products": {
+    "1": {
+      "id": 1,
+      "name": "Laptop",
+      "price": 999.99,
+      "quantity": 10,
+      "category": "Electronics"
+    },
+    "2": {
+      "id": 2,
+      "name": "T-Shirt",
+      "price": 19.99,
+      "quantity": 40,
+      "category": "Clothing"
+    }
+  }
+}

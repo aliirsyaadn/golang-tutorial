@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"os"
 )
 
@@ -95,7 +95,7 @@ func loadInventory(filename string, inv *Inventory) {
 	}
 	defer file.Close()
 
-	data, err := ioutil.ReadAll(file)
+	data, err := io.ReadAll(file)
 	if err != nil {
 		fmt.Println("Error reading inventory file:", err)
 		return
@@ -116,7 +116,7 @@ func saveInventory(filename string, inv *Inventory) {
 		return
 	}
 
-	err = ioutil.WriteFile(filename, data, 0o644)
+	err = os.WriteFile(filename, data, 0o644)
 	if err != nil {
 		fmt.Println("Error writing inventory file:", err)
 		return
